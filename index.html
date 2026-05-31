@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora do Amor 💖</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(135deg,#ffe6f3,#ffd1ea);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Quicksand', sans-serif;
+}
+
+.caixa{
+    width:400px;
+    background:white;
+    border:3px solid #ff4da6;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(255,77,166,0.3);
+}
+
+.coracoes{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.coracoes-bottom{
+    font-size:22px;
+    margin-top:20px;
+}
+
+h1{
+    font-family:'Pacifico', cursive;
+    color:#ff1493;
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+h3{
+    color:#ff4da6;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:2px solid #ff4da6;
+    border-radius:10px;
+    text-align:center;
+    font-size:16px;
+    color:#ff1493;
+    outline:none;
+}
+
+input::placeholder{
+    color:#ff66b2;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#ff4da6;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background:#ff1493;
+}
+
+#resultado{
+    margin-top:20px;
+    font-weight:bold;
+    color:#d1006b;
+    line-height:1.7;
+    font-size:17px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="caixa">
+
+    <div class="coracoes">
+        💖 💕 💖 💕 💖 💕 💖 💕 💖
+    </div>
+
+    <h1>Calculadora do Amor</h1>
+
+    <h3>Digite um número de 0 a 100</h3>
+
+    <input
+        type="number"
+        id="amor"
+        placeholder="Quanto a sua namorada te ama?"
+    >
+
+    <button onclick="calcular()">
+        Conferir
+    </button>
+
+    <p id="resultado"></p>
+
+    <div class="coracoes-bottom">
+        💖 💕 💖 💕 💖 💕 💖 💕 💖
+    </div>
+
+</div>
+
+<script>
+
+function calcular() {
+
+    let numero = Number(document.getElementById("amor").value);
+    let resultado = document.getElementById("resultado");
+
+    if(numero >= 0 && numero <= 40){
+
+        resultado.innerHTML = "Isso é muito pouco! 😒";
+
+    }else if(numero >= 41 && numero <= 49){
+
+        resultado.innerHTML = "Está chegando mais perto, mas ainda não é isso! 💕";
+
+    }else if(numero >= 50 && numero <= 89){
+
+        resultado.innerHTML = "Ainda é mais que isso! 💕";
+
+    }else if(numero === 90){
+
+        resultado.innerHTML = "Quase lá!... 💖";
+
+    }else if(numero >= 91 && numero <= 99){
+
+        resultado.innerHTML = "Tá muito perto agora! 💘";
+
+    }else if(numero === 100){
+
+        resultado.innerHTML =
+        "Esse é o limite do programa, mas meu amor por você é incontável e ilimitado. É infinito! Portanto, nem se ficasse sua vida inteira testando todos os números que existem, você conseguiria acertar a quantidade do meu amor por ti, porque eu te amo imensuravelmente! 💖✨";
+
+    }else if(numero > 100){
+
+        resultado.innerHTML =
+        "Ei, é só até o número 100, não sabe ler? 🙄💖";
+
+    }else{
+
+        resultado.innerHTML =
+        "Digite um número válido entre 0 e 100.";
+
+    }
+}
+
+</script>
+
+</body>
+</html>
